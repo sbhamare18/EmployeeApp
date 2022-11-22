@@ -10,7 +10,7 @@ class Employee(models.Model):
     #default image will be 'profilepic.jpg' and image will vbe uploaded to 'profile_pictures'
     emp_profile_picture = models.ImageField(default='profilepic.jpg',upload_to='profile_pictures')
     phone_number = models.CharField(max_length=20)
-    address = models.TextField(max_length=1000)
+    address = models.TextField(max_length=1000, default=" ")
 
     def __str__(self):
         return self.first_name + ' ' + self.last_name

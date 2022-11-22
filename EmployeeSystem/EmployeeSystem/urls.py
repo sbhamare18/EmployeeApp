@@ -18,6 +18,8 @@ from django.urls import path, include
 from rest_framework import routers
 from employee.views import EmployeeViewSet
 
+#Assigning default router address  
+#we can use simple router if more routes are there
 router = routers.DefaultRouter()
 router.register('employee',EmployeeViewSet)
 
