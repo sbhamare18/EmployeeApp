@@ -5,6 +5,7 @@ from django.db import models
 class Employee(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
+    #Primary key with auto increment
     emp_id = models.AutoField(primary_key=True)
     emp_salary = models.FloatField()
     #default image will be 'profilepic.jpg' and image will vbe uploaded to 'profile_pictures'

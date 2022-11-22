@@ -16,14 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from employee.views import EmployeeViewSet
+from employee.views import EmployeeViewSet #EmployeeView
 
 #Assigning default router address  
 #we can use simple router if more routes are there
 router = routers.DefaultRouter()
 router.register('employee',EmployeeViewSet)
 
+# router.register(r'employees',EmployeeView.as_view(), basename="employees")
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include(router.urls))
+    path('',include(router.urls)),
+
+    # path('employees/',EmployeeView.as_view(), name="employees")
 ]
